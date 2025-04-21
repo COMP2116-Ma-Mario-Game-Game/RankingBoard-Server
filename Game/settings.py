@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'RankingBoard',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'Game.urls'
@@ -129,3 +132,8 @@ MEDIA_ROOT = '/home/COMP2116/Game/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/COMP2116/Game/static'
 STATIC_URL = '/static/'
+CORS_ALLOWED_ORIGINS = [
+    "https://comp2116-ma-mario-game-game.github.io",
+    "http://comp2116-ma-mario-game-game.github.io",
+]
+CORS_ALLOW_CREDENTIALS = True
