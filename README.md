@@ -1,4 +1,4 @@
 # RankingBoard-Server
 This back-end is for supporting the game's ranking system.
-### Development partten
+### Development platform
 - Django 4.2
